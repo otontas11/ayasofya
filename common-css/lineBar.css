@@ -1,0 +1,158 @@
+.wrapper {
+  width: 960px;
+
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 20px;
+}
+ 
+p.credit {
+  font-size: 12px;
+  margin-top: 40px;
+  color: #ccc;
+}
+
+.hr {
+  display: block;
+  border: none;
+  width: 960px;
+  height: 2px;
+  background: url(/images/divider.png);
+  margin: 10px 0;
+}
+
+.clear {
+  clear: both;
+}
+
+.progress {
+  height: 110px;
+  margin: 80px 0;
+  background: url(/images/progress-container.png) no-repeat;
+  position: relative;
+}
+
+.txt-launch-day-hat {
+  background: url(/images/txt-launch-day-hat.png) no-repeat;
+  width: 117px;
+  height: 159px;
+  position: absolute;
+  top: -120px;
+  right: -45px;
+}
+
+.txt-launch-day {
+  background: url(/images/txt-launch-day.png) no-repeat;
+  width: 112px;
+  height: 110px;
+  position: absolute;
+  top: -80px;
+  right: -40px;
+}
+
+.progress-bar {
+  height: 43px;
+  background-image: linear-gradient(to bottom, #9fbff4 0%, #555bb4 100%);
+ 
+  position: absolute;
+  top: 14px;
+  left: 0px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  font-size: 1.8rem;
+  display: flex; 
+  justify-content: center;
+align-items: center;
+}
+
+.progress-bar-container {
+  width: 930px;
+  height: 70px;
+  margin-left: 13px;
+  position: relative;
+}
+
+.mailing-list h2 {
+  width: 400px;
+  float: left;
+}
+
+.mailing-list form {
+  display: block;
+  width: 450px;
+  float: right;
+  margin: 5px 0 0 0;
+}
+
+.mailing-list input[type="text"] {
+  width: 280px;
+  height: 16px;
+  background: url(images/form-bg.png) no-repeat;
+  border: none;
+  color: #c9c9c9;
+  font-size: 14px;
+  padding: 15px 10px;
+  margin: 0;
+}
+
+.mailing-list input[type="submit"] {
+  width: 90px;
+  height: 44px;
+  background: url(images/btn-subscribe.png) no-repeat;
+  border: none;
+  text-indent: -5000px;
+  cursor: pointer;
+  margin: 0 0 0 -10px;
+  text-transform: capitalize;
+}
+
+.mailing-list input[type="submit"]:hover {
+  background-position: 0 -44px;
+}
+
+.mailing-list input[type="submit"]:active {
+  background-position: 0 -88px;
+}
+
+.mailing-list input[type="text"]:focus {
+  outline: none;
+}
+
+.tipsy {
+  margin-bottom: 25px;
+  font-size: 18px;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  background-repeat: no-repeat;
+  background-image: url(images/tipsy.png);
+  
+  text-transform: uppercase;
+}
+.tipsy-inner {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  max-width: 400px;
+  text-align: right;
+  -webkit-box-shadow: 0 20px 15px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 20px 15px rgba(0, 0, 0, 0.5);
+}
+.tipsy-inner {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+.tipsy-north {
+  background-position: top center;
+}
+.tipsy-south {
+  background-position: bottom center;
+}
+.tipsy-east {
+  background-position: right center;
+}
+.tipsy-west {
+  background-position: left center;
+}
+.tipsy-container {
+  border: 1px solid green;
+}
