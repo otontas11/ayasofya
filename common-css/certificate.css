@@ -10,6 +10,9 @@
     font-size: x-small;
   }
 }
+#draw{
+  
+}
 
 html, body, .content {
   margin: 0;
@@ -137,7 +140,9 @@ height: 816px;
 .frame {
   position: relative;
   padding: 1.25rem;
-  background:
+   
+z-index: 10;
+  background:url(../images/hc2.png) no-repeat 100% 100%,
     radial-gradient(circle at top left, transparent 1.25rem, #ca4 1.25rem, #ca4 1.5rem, transparent 1.5rem) left top / 1.5rem 1.5rem no-repeat,
     radial-gradient(circle at top right, transparent 1.25rem, #ca4 1.25rem, #ca4 1.5rem, transparent 1.5rem) right top / 1.5rem 1.5rem no-repeat,
     radial-gradient(circle at bottom left, transparent 1.25rem, #ca4 1.25rem, #ca4 1.5rem, transparent 1.5rem) left bottom / 1.5rem 1.5rem no-repeat,

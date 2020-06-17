@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>HTML to PDF - techumber</title>
+ <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.0/semantic.min.css">
+<link href="./hey.css">
+ 
+</head>
+<body>
+ <div class="ui page grid">
+  <div class="wide column">
+   <h1 class="ui header aligned center">HTML to PDF</h1>
+   <div class="ui divider hidden"></div>
+  </div>
+ </div>
+ 
+  
+  <div class="ui segment">
+ <div class="ui button aligned center teal" id="create_pdf">Create PDF</div>
+ <div class="ui divider"></div>
+ <form class="ui form">
+  <table>
+     
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Giovanni Rovelli</td>
+    <td>Italy</td>
+  </tr>
+</table>
+
+</form>
+</div>
+</body>
+  <!-- scripts -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.2.61/jspdf.min.js"></script> 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jcanvas/16.7.3/jcanvas.min.js"></script>
+<script>
+    (function(){
+var 
+ form = $('.form'),
+ cache_width = form.width(),
+ a4  =[ 595.28,  841.89];  // for a4 size paper width and height
+ 
+$('#create_pdf').on('click',function(){
+ $('body').scrollTop(0);
+ createPDF();
+});
+//create pdf
+function createPDF(){
+ // getCanvas().then(function(canvas){
+  var 
+  // img = canvas.toDataURL("image/png"),
+  doc = new jsPDF();     
+        // doc.addImage(img, 'JPEG', 20, 20);
+        // doc.save('test.pdf');
+        // form.width(cache_width);
+   doc.fromHTML($('.form').get(0), 15, 15, {
+	'width': 800
+});
+  doc.save('test.pdf');
+
+ // });
+}
+ 
+// create canvas object
+function getCanvas(){
+ form.width((a4[0]*1.33333) -80).css('max-width','none');
+ return html2canvas(form,{
+     imageTimeout:2000,
+     removeContainer:false
+    }); 
+}
+ 
+}());
+</script>
+</html>

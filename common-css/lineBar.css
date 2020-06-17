@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .wrapper {
   max-width: 960px;
   margin: 0 auto;
@@ -14,6 +21,8 @@ font-family: 'Helvetica', 'Arial', sans-serif;
 }
 .hedefler b{
   font-weight: 900;
+  font-size: 2rem;
+letter-spacing: 1px;
  
 }
 p.credit {
@@ -69,9 +78,15 @@ p.credit {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   font-size: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: 13px;
 }
 
@@ -180,7 +195,9 @@ p.credit {
     height: 3rem;
     background: #dcdbd7;
 
-    box-shadow: 0 -1px 0 #bab9b4;
+    -webkit-box-shadow: 0 -1px 0 #bab9b4;
+
+            box-shadow: 0 -1px 0 #bab9b4;
     margin-bottom: 24px;
 
     border: 2px solid #72dbf1;
@@ -195,7 +212,9 @@ p.credit {
     top: -120px;
     right: -45px;
     right: 0px;
-    transform: rotate(-50deg);
+    -webkit-transform: rotate(-50deg);
+        -ms-transform: rotate(-50deg);
+            transform: rotate(-50deg);
   }
 
   
@@ -212,7 +231,9 @@ p.credit {
     height: 3rem;
     background: #dcdbd7;
 
-    box-shadow: 0 -1px 0 #bab9b4;
+    -webkit-box-shadow: 0 -1px 0 #bab9b4;
+
+            box-shadow: 0 -1px 0 #bab9b4;
     margin-bottom: 24px;
 
     border: 2px solid #72dbf1;
