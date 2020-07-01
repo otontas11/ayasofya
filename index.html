@@ -8,90 +8,39 @@
 
     <!-- Font -->
 
-    <!-- <link
+    <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:400,700%7CPoppins:400,500"
       rel="stylesheet"
-    /> -->
-    <!-- <link rel="stylesheet" type="text/css" href="common-css/demo.css" /> -->
+    />
+   
     <link rel="stylesheet" type="text/css" href="common-css/imageSlider.css" />
 
-    <link href="common-css/ionicons.css" rel="stylesheet" />
-
-    <!-- <link rel="stylesheet" href="common-css/jquery.classycountdown.css" /> -->
+     
 
     <link href="07-comming-soon/css/styles.css" rel="stylesheet" />
 
     <link href="07-comming-soon/css/responsive.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="common-css/lineBar.css" />
-    <style>
-      div#progress {
-        width: 100%;
-        height: 100%;
-        position: relative;
-
-        padding: 2px;
-        border: 1px solid rgba(0, 0, 0, 0.6);
-        border-radius: 6px;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
-      }
-      div#progress_bar {
-        height: 100%;
-        width: 100%;
-        border-radius: 4px;
-        background: #00adc1;
-
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        background-size: cover;
-        background-position: 50% 50%;
-        background-repeat: none;
-
-        background-image: url("./images/cami.png");
-      }
-      div#value {
-        vertical-align: middle;
-
-        color: #fff;
-        border-radius: 5px;
-        font-size: larger;
-        font-weight: 900;
-        font-size: 1.2rem;
-        letter-spacing: 1px;
-        text-shadow: 0px 1px 1px #000;
-        margin-bottom: 5px;
-      }
-
-      #progress:after {
-        content: "";
-        background-image: url("./images/cami.png");
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        opacity: 0.1;
-        z-index: -1;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="common-css/progress.css" />
+  
   </head>
   <body id="page">
     <ul class="cb-slideshow">
       <li>
         <span>Image 01</span>
-        <div><h3> </h3></div>
+        <!-- <div><h3> </h3></div> -->
       </li>
       <li>
         <span>Image 02</span>
-        <div><h3></h3> </h3></div>
+        <!-- <div><h3></h3> </h3></div> -->
       </li>
       <li>
         <span>Image 03</span>
-        <div><h3> </h3></div>
+        <!-- <div><h3> </h3></div> -->
       </li>
       <li>
         <span>Image 04</span>
-        <div><h3> </h3></div>
+        <!-- <div><h3> </h3></div> -->
       </li>
       <li>
         <span>Image 05</span>
@@ -99,7 +48,7 @@
       </li>
       <li>
         <span>Image 06</span>
-        <div><h3></h3></div>
+        <!-- <div><h3></h3></div> -->
       </li>
     </ul>
 
@@ -119,8 +68,9 @@
               name="email"
               type="text"
               placeholder="Ad Soyad Giriniz"
+              id="isim"
             />
-            <a id="submit-btn" href="./hey.html">
+            <a id="submit-btn" >
               <button class="submit-btn" name="submit">
                 <b>Gönder</b>
               </button>
@@ -168,31 +118,20 @@
 
     <script src="common-js/jquery-3.1.1.min.js"></script>
 
-    <!-- <script src="common-js/jquery.countdown.min.js"></script> -->
-
+    
     <script src="common-js/scripts.js"></script>
-    <!-- <script type="text/javascript" src="common-js/jquery.tipsy.js"></script> -->
-
-    <!-- <script type="text/javascript">
-      $(function () {
-        $("#tipsy").tipsy({ fade: true, gravity: "s" });
-      });
-
-      $percent = 0;
-
-      $(".submit-btn").click(function () {
-        $percent < 100 ? ($percent += 1) : "";
-        $(".progress-bar").width($percent + "%");
-		$(".progress-bar").html($percent + "%");
-		$(".progress-bar-container").attr("title", "%"+ $percent+" Tamamlandı");
-		 
-		
-      });
-    </script> -->
+   
     <script>
       $("#submit-btn").click(function () {
         console.log("object");
         progressAnimation();
+
+        
+
+        var str = $("#isim").val();
+
+alert(str);
+
       });
     </script>
 
@@ -238,6 +177,10 @@
             </p>`
         }
       }
+    </script>
+
+    <script>
+      $('# var te = $("#text1").val();')
     </script>
   </body>
 </html>
