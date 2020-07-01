@@ -1,0 +1,19 @@
+{
+  "name": "ayasofya",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/otontas11/ayasofya.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/otontas11/ayasofya/issues"
+  },
+  "homepage": "https://github.com/otontas11/ayasofya#readme"
+}

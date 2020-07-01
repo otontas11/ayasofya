@@ -15,93 +15,95 @@
     <!-- <link rel="stylesheet" type="text/css" href="common-css/demo.css" /> -->
     <link rel="stylesheet" type="text/css" href="common-css/imageSlider.css" />
 
-
     <link href="common-css/ionicons.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="common-css/jquery.classycountdown.css" />
+    <!-- <link rel="stylesheet" href="common-css/jquery.classycountdown.css" /> -->
 
     <link href="07-comming-soon/css/styles.css" rel="stylesheet" />
 
     <link href="07-comming-soon/css/responsive.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="common-css/lineBar.css" />
     <style>
+      div#progress {
+        width: 100%;
+        height: 100%;
+        position: relative;
 
-div#progress {
-	  width: 100%;
-   height:100%;
-  position: relative;
-	
- 
-	padding: 2px;
-	border: 1px solid rgba(0,0,0,.6);
-	border-radius: 6px;
-	box-shadow: 2px 2px 4px rgba(0,0,0,.75);
-}
-div#progress_bar {
-   height:100%;
-	 width:100%;
-	border-radius: 4px;
-	background: #00ADC1;
- 
- 
- 
-    
+        padding: 2px;
+        border: 1px solid rgba(0, 0, 0, 0.6);
+        border-radius: 6px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+      }
+      div#progress_bar {
+        height: 100%;
+        width: 100%;
+        border-radius: 4px;
+        background: #00adc1;
 
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: none;
- 
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: none;
 
+        background-image: url("./images/cami.png");
+      }
+      div#value {
+        vertical-align: middle;
 
- background-image: url("./images/cami.png");
-}
-div#value {
-	vertical-align: middle;
- 
- 
- 
-	color: #fff;
-	border-radius: 5px;
-  font-size: larger;
-  font-weight: 900;
-font-size: 1.2rem;
-letter-spacing: 1px;
-  text-shadow: 0px 1px 1px #000;
-  margin-bottom: 5px;
-}
+        color: #fff;
+        border-radius: 5px;
+        font-size: larger;
+        font-weight: 900;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        text-shadow: 0px 1px 1px #000;
+        margin-bottom: 5px;
+      }
 
-#progress:after{
-	
-
-content: "";
- background-image: url("./images/cami.png");
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0.1;
-  z-index: -1;}
+      #progress:after {
+        content: "";
+        background-image: url("./images/cami.png");
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.1;
+        z-index: -1;
+      }
     </style>
   </head>
   <body id="page">
     <ul class="cb-slideshow">
-       
-      <li><span>Image 01</span><div><h3>İslam'ın</h3></div></li>
-      <li><span>Image 02</span><div><h3>Beklediği</h3></div></li>
-      <li><span>Image 03</span><div><h3>En Şerefli</h3></div></li>
-      <li><span>Image 04</span><div><h3>En Güzel Gün</h3></div></li>
-      <li><span>Image 05</span><div><h3>Bugündür</h3></div></li>
-      <li><span>Image 06</span><div><h3>Bugün Ayasofyadır</h3></div></li>
-  </ul>
+      <li>
+        <span>Image 01</span>
+        <div><h3> </h3></div>
+      </li>
+      <li>
+        <span>Image 02</span>
+        <div><h3></h3> </h3></div>
+      </li>
+      <li>
+        <span>Image 03</span>
+        <div><h3> </h3></div>
+      </li>
+      <li>
+        <span>Image 04</span>
+        <div><h3> </h3></div>
+      </li>
+      <li>
+        <span>Image 05</span>
+        <div><h3> </h3></div>
+      </li>
+      <li>
+        <span>Image 06</span>
+        <div><h3></h3></div>
+      </li>
+    </ul>
 
-    <div
-      class="main-area center-text"
-      
-    >
+    <div class="main-area center-text">
       <div class="display-table">
         <div class="display-table-cell">
           <h1 class="title"><b>Ayasofya Açılıyor</b></h1>
@@ -111,42 +113,34 @@ content: "";
           </p>
 
           <div class="email-input-area">
-           
-			  <input
-			  autocomplete="off"
-                class="email-input"
-                name="email"
-                type="text"
-                placeholder="Ad Soyad Giriniz"
-              />
-              <a href="./hey.html">
-                <button class="submit-btn" name="submit"  >
-                  <b>Gönder</b>
-                </button>
+            <input
+              autocomplete="off"
+              class="email-input"
+              name="email"
+              type="text"
+              placeholder="Ad Soyad Giriniz"
+            />
+            <a id="submit-btn" href="./hey.html">
+              <button class="submit-btn" name="submit">
+                <b>Gönder</b>
+              </button>
             </a>
-     
-		 
           </div>
 
           <!-- <div id="normal-countdown" data-date="2020/07/02"></div> -->
-          <div>  <p class="hedefler ribbon certificate__content ">
-            <b>Hedef : 2 Milyon İmza</b> <span class="tire" style="color: black">--</span>
-            <b>Ulaşılan : 1.250.000 İmza</b> <span class="tire" style="color: black">--</span>
-            <b>Kalan : 750.000 İmza</b> 
-           </p></div>
+          <div id="hedeflerim">
+           
+          </div>
 
-           <div class="hr"></div>
+          <div class="hr"></div>
 
-           <div id="value">0%</div>
-           <div id="wrap" style="height: 250px;">
-     
+          <div id="value">0%</div>
+          <div id="wrap" style="height: 250px;">
             <div id="progress">
               <div id="progress_bar"></div>
             </div>
-          <div class="wrapper">
-        
-
-            <!-- <section class="progress">
+            <div class="wrapper">
+              <!-- <section class="progress">
               <div
                 class="progress-bar-container"
                 id="tipsy"
@@ -164,30 +158,20 @@ content: "";
               <article class="txt-launch-day-hat"></article>
 			</section>
        -->
-   
-      
-      </div>
-			
- 
-            <div class="hr"></div>
-          
-          
-          </div>
-     
-        </div>
-   
-      </div>
+            </div>
 
-     
+            <div class="hr"></div>
+          </div>
+        </div>
+      </div>
     </div>
-  
+
     <script src="common-js/jquery-3.1.1.min.js"></script>
 
-    <script src="common-js/jquery.countdown.min.js"></script>
+    <!-- <script src="common-js/jquery.countdown.min.js"></script> -->
 
     <script src="common-js/scripts.js"></script>
-    <script type="text/javascript" src="common-js/jquery.tipsy.js"></script>
-		<!-- <script type="text/javascript" src="common-js/modernizr.custom.86080.js"></script> -->
+    <!-- <script type="text/javascript" src="common-js/jquery.tipsy.js"></script> -->
 
     <!-- <script type="text/javascript">
       $(function () {
@@ -206,35 +190,54 @@ content: "";
       });
     </script> -->
     <script>
-      function redirect()
-    {
-    var url = "http://www.(url).com";
-    window.location(url);
-    }
+      $("#submit-btn").click(function () {
+        console.log("object");
+        progressAnimation();
+      });
     </script>
-    <script>
- 
-$ = (Id) => (document.getElementById(Id) || null);
- 
-const MAX = +((getComputedStyle($("progress")).width).split("px")[0]); // parseFloat
-const OFFSET = 1; // padding: 2px
-const dx = MAX / 5000.0;
-let n = 0, x = n;
- 
-window.requestAnimationFrame(progressAnimation);
- 
-function progressAnimation(timeStamp) {
-	if (x < MAX-OFFSET) {
-		window.requestAnimationFrame(progressAnimation);
-	}
-	// Update progress bar
-	$("progress_bar").style.width = x + "px";
-	x += dx;
-	// Update numeric value
-	++n;
-	$("value").innerHTML = (n>=5000) ? "100%" : (n + '. kişi düğüm attı ve halının '+ parseFloat(n/50).toFixed( 2 ) +"%"+' bitti');
-}
 
+    <script>
+      $ = (Id) => document.getElementById(Id) || null;
+
+      const MAX = +getComputedStyle($("progress")).width.split("px")[0]; // parseFloat
+      const OFFSET = 0; // padding: 2px
+      const dx = MAX / 5000.0;
+      let n = 0,
+        x = n;
+
+      window.requestAnimationFrame(progressAnimation);
+
+      function progressAnimation(timeStamp) {
+        if (x <= MAX - OFFSET) {
+          // window.requestAnimationFrame(progressAnimation);
+
+          // Update progress bar
+          $("progress_bar").style.width = x + "px";
+          x += dx;
+          // Update numeric value
+          ++n;
+          $("value").innerHTML =
+            n >= 5000
+              ? "5.000 ilmek atıldı Teşekkürler"
+              : (n -
+                1) +
+                ". kişi düğüm attı ve halının " +
+                parseFloat((n-1) / 50).toFixed(2) +
+                "%" +
+                " bitti";
+
+
+
+                $("hedeflerim").innerHTML =
+            `   <p class="hedefler ribbon certificate__content">
+              <b>Hedef : 2 Milyon İmza</b>
+              <span class="tire" style="color: black;">--</span>
+              <b>Ulaşılan : ${n-1} İmza</b>
+              <span class="tire" style="color: black;">--</span>
+              <b>Kalan : ${5000-n+1} İmza</b>
+            </p>`
+        }
+      }
     </script>
   </body>
 </html>
