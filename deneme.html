@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        margin: 0;
+      }
+      #canvas {
+        background-color: #ccc;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- <img src="./images/ayasofya.jpg" id="sample" /> -->
+    <canvas id="myCanvas" width="500" height="500">
+      Your browser does not support the HTML5 canvas tag.
+    </canvas>
+
+    <script>
+      let imgData = "";
+      //resmi önce 64 bite cevir
+      function convertImageToBase64(img, outputFormat) {
+        var originalWidth = img.style.width;
+        var originalHeight = img.style.height;
+
+        img.style.width = "auto";
+        img.style.height = "auto";
+        img.crossOrigin = "Anonymous";
+
+        var canvas = document.createElement("canvas");
+
+        canvas.width = img.width;
+        canvas.height = img.height;
+
+        var ctx = canvas.getContext("2d");
+        ctx.drawImage(img, 0, 0);
+
+        img.style.width = originalWidth;
+        img.style.height = originalHeight;
+
+        var dataUrl = canvas.toDataURL(outputFormat);
+
+        return dataUrl;
+      }
+
+      //resmi önce 64 bite cevir
+
+      function convertImageUrlToBase64(url, callback, outputFormat) {
+        var img = new Image();
+        img.crossOrigin = "anonymous";
+        img.onload = function () {
+          callback(convertImageToBase64(this, outputFormat));
+        };
+        img.src = url;
+      }
+
+      //donusturme
+      convertImageUrlToBase64("./images/ayasofya.jpg", function (url) {
+        //url 64 bit resmin kodunu tutar
+        imgData = url;
+
+        var isim = "Şahika  Ağlama Çarşaf";
+
+        //buyuk harfe donustur
+        String.prototype.turkishToUpper = function () {
+          var string = this;
+                var letters = {
+          i: "İ",
+          ş: "Ş",
+          ğ: "Ğ",
+          ü: "Ü",
+          ö: "Ö",
+          ç: "Ç",
+          ı: "I",
+        };
+        string = string.replace(/(([iışğüçö]))/g, function (letter) {
+          return letters[letter];
+        });
+          return string.toUpperCase();
+        };
+
+        isim = isim.turkishToUpper();
+        //////////
+
+        const pageImage = new Image();
+        pageImage.src = imgData;
+        pageImage.onload = function () {
+          const canvas = document.querySelector("canvas");
+          canvas.width = pageImage.naturalWidth;
+          canvas.height = pageImage.naturalHeight;
+
+          const ctx = canvas.getContext("2d");
+          ctx.imageSmoothingEnabled = false;
+          ctx.drawImage(pageImage, 0, 0);
+          ctx.shadowBlur = 5;
+          ctx.shadowOffsetX = 6;
+          ctx.fillStyle = "#FFFFFF";
+          ctx.shadowColor = "gray";
+
+          ctx.font = "900 150px Comic Sans MS";
+
+          ctx.textAlign = "center";
+          ctx.fillText(isim, canvas.width / 2, 1500);
+
+          saveScreenshot(canvas);
+        };
+        function saveScreenshot(canvas) {
+          let fileName = "image";
+          const link = document.createElement("a");
+          link.download = fileName + ".png";
+           
+          canvas.toBlob(function (blob) {
+            console.log("blob",blob);
+            link.href = URL.createObjectURL(blob);
+            console.log("link.download",link)
+
+            link.click();
+          });
+        }
+        //////////
+      });
+      //açılır açılmaz ekrana boyutu bassın
+      resize();
+      function resize() {
+        var canvas = document.querySelector("canvas");
+        var canvasRatio = 4800 / 3490;
+        var windowRatio = window.innerHeight / window.innerWidth;
+        var width;
+        var height;
+
+        if (windowRatio < canvasRatio) {
+          height = window.innerHeight;
+          width = height / canvasRatio;
+        } else {
+          width = window.innerWidth;
+          height = width * canvasRatio;
+        }
+
+        canvas.style.width = width + "px";
+        canvas.style.height = height + "px";
+      }
+    </script>
+  </body>
+</html>

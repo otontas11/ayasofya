@@ -23,7 +23,7 @@ div#progress {
     background-position: 50% 50%;
     background-repeat: none;
 
-    background-image: url("./images/cami.png");
+    background-image: url("../images/cami.png");
   }
   div#value {
     vertical-align: middle;
@@ -40,7 +40,7 @@ div#progress {
 
   #progress:after {
     content: "";
-    background-image: url("./images/cami.png");
+    background-image: url("../images/cami.png");
     position: absolute;
     top: 0;
     left: 0;
