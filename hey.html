@@ -97,11 +97,34 @@
       //url 64 bit resmin kodunu tutar
       imgData = url;
 
-      var isim = "Şahika  Ağlama Çarşaf";
+      var isim = "Sayın : ĞİIŞşÇI şişğüöçu";
 
       //buyuk harfe donustur
       String.prototype.turkishToUpper = function () {
         var string = this;
+
+        var letters = {
+          i: "i",
+          ş: "ş",
+          ğ: "ğ",
+          ü: "ü",
+          ö: "ö",
+          ç: "ç",
+          ı: "ı",
+
+          İ:"i",
+          Ö:'ö',
+          Ü:'ü',
+          Ç:'ç',
+          I:'ı',
+          Ş:'ş',
+          Ğ:'ğ'
+
+        };
+
+        string = string.replace(/(([iışğüçöİÖÜÇIŞĞ]))/g, function (letter) {
+          return letters[letter];
+        }); 
         var splitStr = string.toLowerCase().split(' ');
         for (var i = 0; i < splitStr.length; i++) {
 
@@ -134,7 +157,7 @@
         ctx.font = ' 120px "Poppin"';
 
         ctx.textAlign = "center";
-        ctx.fillText(isim, canvas.width / 2 + 250, 2555);
+        ctx.fillText(isim, canvas.width/2, 2555);
 
         saveScreenshot(canvas);
       };
